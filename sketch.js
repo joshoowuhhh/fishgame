@@ -66,8 +66,8 @@ function draw() {
   if (gameState == "L9") {
     Win();
   }
-  text(("Ye Symbols Collected: " + score), width / 2, 40);
-  image(pink, mouseX, mouseY, 32, 32);
+  text(("Fish Coins Collected: " + score), width / 2, 40);
+  image(pink, mouseX, mouseY, 50, 50);
 } // end of draw ===================================
 
 function levelOne() {
