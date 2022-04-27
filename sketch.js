@@ -18,12 +18,6 @@ function preload() {
   bk5 = loadImage('assets/bk5.png');
   bk6 = loadImage('assets/bk6.png');
   bk7 = loadImage('assets/bk7.png');
-  yeezusye = loadImage('https://joshoowuhhh.github.io/ye/yeezusye.png');
-  pablo = loadImage('https://joshoowuhhh.github.io/ye/pablo.jpg');
-  pabloye = loadImage('https://joshoowuhhh.github.io/ye/pabloyee.png');
-  donda = loadImage('https://joshoowuhhh.github.io/ye/donda.jpg');
-  dondaye = loadImage('https://joshoowuhhh.github.io/ye/dondaye.png');
-  happyye = loadImage('https://joshoowuhhh.github.io/ye/kanyesmile.gif');
 }
 
 
@@ -73,7 +67,7 @@ function draw() {
 function levelOne() {
   background(clean);
   text("Level 1", width / 2, 70);
-  fill(219, 18, 18);
+  fill(255, 255, 255);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if (distToBall < ballSize / 1) {
     ballx = random(width);
@@ -92,7 +86,7 @@ function levelOne() {
 function levelTwo() {
   background(stage);
   text("Level 2", width / 2, 70);
-  fill(255, 205, 5);
+  fill(255, 255, 255);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if (distToBall < ballSize / 4) {
     ballx = random(width);
@@ -110,7 +104,7 @@ function levelTwo() {
 function levelThree() {
   background(bk2);
   text("Level 3", width / 2, 70);
-  fill(5, 255, 234);
+  fill(255, 255, 255);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if (distToBall < ballSize / 4) {
     ballx = random(width);
@@ -129,7 +123,7 @@ function levelThree() {
 function levelFour() {
   background(bk3);
   text("Level 4", width / 2, 70);
-  fill(255, 3, 3);
+  fill(255, 255, 255);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if (distToBall < ballSize / 4) {
     ballx = random(width);
@@ -149,7 +143,7 @@ function levelFour() {
 function levelFive() {
   background(bk4);
   text("Level 5", width / 2, 70);
-  fill(227, 190, 23);
+  fill(255, 255, 255);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if (distToBall < ballSize / 2) {
     ballx = random(width);
@@ -169,7 +163,7 @@ function levelFive() {
 function levelSix() {
   background(bk5);
   text("Level 6", width / 2, 70);
-  fill(255, 3, 3);
+  fill(255, 255, 255);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if (distToBall < ballSize / 4) {
     ballx = random(width);
@@ -227,8 +221,11 @@ function levelEight() {
 } // end of Level 8 ================================
 
 function Win() {
-  background(happyye);
+  background(coin);
   fill(255, 255, 255);
   textSize(25);
-  text("Happy Ye! You win!", width / 2, 70);
+  text("Nice! You win!", width / 2, 70);
+  text("But with all the trash in the sea...", width / 2, 100)
+  text("did you really win?", width / 2, 130);
+
 }
