@@ -2,13 +2,12 @@ var ballx = 300;
 var bally = 300;
 var ballSize = 45;
 var score = 0;
-var song;
 var gameState = "L1";
 
 function preload(){
-  bkground = loadImage('assets/bkground.png');
+  stage = loadImage('assets/bkground.png');
   concept= loadImage('assets/concept.png');
-  late = loadImage('https://joshoowuhhh.github.io/ye/late.jpg');
+  pink = loadImage('assets/pinkfish.png');
   latebear = loadImage('https://joshoowuhhh.github.io/ye/latebear.png');
   grad = loadImage('https://joshoowuhhh.github.io/ye/graduation.jpg');
   gradbear = loadImage('https://joshoowuhhh.github.io/ye/gradbear.png');
@@ -28,14 +27,16 @@ function preload(){
 
 function setup() {
   createCanvas(600, 600);
+  noCursor();
   textAlign(CENTER);
   textSize(24);
   textStyle(BOLDITALIC);
-text('Font Style Bold Italic', 10, 90);
+  text('Font Style Bold Italic', 10, 90);
 } // end of seutup
 
 function draw() {
-  background(bkground);
+  image(pink, mouseX, mouseY, 20,20);
+  background(stage);
   if(gameState == "L1"){
     levelOne();
   }
@@ -63,13 +64,15 @@ function draw() {
      if(gameState == "L9"){
     Win();
   }
-    image(fogImg, mouseX, mouseY, 20,20);
-  }
+
   text(("Ye Symbols Collected: " + score),width/2,40);
-} // end of draw ===================================
+  }
+
+
+   // end of draw ===================================
 
 function levelOne(){
-  background(bkground);
+  background(stage);
   text("2004: The College Dropout", width/2,height-25);
   fill(219, 18, 18);
   var distToBall = dist(ballx,bally, mouseX, mouseY);
@@ -88,7 +91,7 @@ function levelOne(){
 } // end of Level 1 ================================
 
 function levelTwo(){
-  background(bkground);
+  background(stage);
   text("2005: Late Registration", width/2,height-25);
   fill(255, 205, 5);
   var distToBall = dist(ballx,bally, mouseX, mouseY);
@@ -106,7 +109,7 @@ function levelTwo(){
 } // end of Level 2 ================================
 
 function levelThree(){
-  background(bkground);
+  background(stage);
   text("2007: Graduation", width/2,height-25);
   fill(5, 255, 234);
   var distToBall = dist(ballx,bally, mouseX, mouseY);
@@ -125,7 +128,7 @@ function levelThree(){
 } // end of Level 3 ================================
 
 function levelFour(){
-  background(bkground\);
+  background(stage);
   text("2008: 808s & Heartbreak", width/2,height-25);
   fill(255, 3, 3);
   var distToBall = dist(ballx,bally, mouseX, mouseY);
